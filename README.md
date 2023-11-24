@@ -22,3 +22,15 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
+
+
+### Command Line Log
+```
+rails new rails-template-with-auth
+cd rails-template-with-auth
+bundle install
+rails g model User
+bundle exec rake db:migrate
+rails g controller Users
+
+```
