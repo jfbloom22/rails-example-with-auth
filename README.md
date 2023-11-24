@@ -33,4 +33,7 @@ rails g model User
 bundle exec rake db:migrate
 rails g controller Users
 rails g controller Sessions
+./bin/bundle add tailwindcss-rails
+./bin/rails tailwindcss:install
+bundle add hotwire-livereload --group development
 ```

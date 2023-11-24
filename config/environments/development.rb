@@ -8,6 +8,10 @@ Rails.application.configure do
   # since you don't have to restart the web server when you make code changes.
   config.enable_reloading = true
 
+  config.hotwire_livereload.listen_paths << Rails.root.join("app/assets/builds")
+  config.hotwire_livereload.force_reload_paths << Rails.root.join("app/assets/stylesheets")
+  config.hotwire_livereload.force_reload_paths << Rails.root.join("app/javascript")
+
   # Do not eager load code on boot.
   config.eager_load = false
 
