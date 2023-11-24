@@ -32,5 +32,5 @@ bundle install
 rails g model User
 bundle exec rake db:migrate
 rails g controller Users
-
+rails g controller Sessions
 ```
