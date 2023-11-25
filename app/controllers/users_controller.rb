@@ -11,6 +11,7 @@ class UsersController < ApplicationController
                 format.html { redirect_to '/dashboard', notice: 'User was successfully created.' }
                 format.json { render :show, status: :created, location: @user }
             else
+                format.turbo_stream
                 format.html { render :new, status: :unprocessable_entity }
                 format.json { render json: @user.errors, status: :unprocessable_entity }
             end
