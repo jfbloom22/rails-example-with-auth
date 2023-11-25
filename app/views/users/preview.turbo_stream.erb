@@ -1,0 +1,8 @@
+<%= turbo_stream.update :preview do %>
+   Attributes
+   <%= @preview_user.attributes %>
+   Valid?
+   <%= @preview_user.valid? %>
+   Errors:
+   <%= @preview_user.errors.full_messages %>
+<% end %>

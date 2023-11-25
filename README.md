@@ -36,4 +36,5 @@ rails g controller Sessions
 ./bin/bundle add tailwindcss-rails
 ./bin/rails tailwindcss:install
 bundle add hotwire-livereload --group development
+rails g stimulus autosubmit
 ```
