@@ -1,8 +1,10 @@
 <%= turbo_stream.update :preview do %>
-   Attributes
-   <%= @preview_user.attributes %>
-   Valid?
-   <%= @preview_user.valid? %>
-   Errors:
-   <%= @preview_user.errors.full_messages %>
+   <% if !@preview_user.valid? && @preview_user.errors.any? %>
+       <p class="text-red-500 text-xl">Please correct the following errors:</p>
+       <ul>
+           <% @preview_user.errors.full_messages.each do |message| %>
+               <li class="text-red-500"><%= message %></li>
+           <% end %>
+       </ul>
+   <% end %>
 <% end %>
