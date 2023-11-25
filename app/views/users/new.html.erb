@@ -4,16 +4,6 @@
             <h1 class='text-3xl mb-4'>Sign up</h1>
             <%#= notice %>
             <%= form_with(model: User, data: {controller: "autosubmit", action: "input->autosubmit#submit" }) do |f| %>
-                <% if @user.errors.any? %>
-                    <div id="error_explanation" class="text-red-500">
-                        <h2 class="text-xl"><%= pluralize(@user.errors.count, "error") %> prohibited this user from being saved:</h2>
-                        <ul>
-                            <% @user.errors.full_messages.each do |message| %>
-                                <li><%= message %></li>
-                            <% end %>
-                        </ul>
-                    </div>
-                <% end %>
 
                 <div id="preview"></div>
 
