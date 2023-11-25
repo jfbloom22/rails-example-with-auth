@@ -1,4 +1,10 @@
 Rails.application.routes.draw do
+  get 'signup-temp', to: 'temp_users#new'
+  resources :temp_users, except: [:new] do
+    collection do
+      post :preview
+    end
+  end
   get 'signup', to: 'users#new'
   resources :users, except: [:new] do
     collection do
