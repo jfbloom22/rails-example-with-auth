@@ -2,6 +2,13 @@ class UsersController < ApplicationController
     def new
         @user = User.new
     end
+    def step1
+        @user = User.new
+    end
+    def step2
+        Rails.logger.info "Session email: #{session[:email]}"
+        @user = User.new(email: session[:email])
+    end
     def create
         @user = User.new(user_params)
 

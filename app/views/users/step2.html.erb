@@ -3,19 +3,9 @@
         <div class="form bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
             <h1 class='text-3xl mb-4'>Sign up</h1>
             <%#= notice %>
-            <%= form_with(model: User, data: {controller: "autosubmit", action: "input->autosubmit#submit" }) do |f| %>
+            <%= form_with(model: User, data: {controller: "autosubmit", action: "input->autosubmit#submit" }, url: users_path, id: 'new_user') do |f| %>
 
                 <div id="preview"></div>
-
-                <div class="mb-4">
-                    <%= f.label :first_name, class: "block text-gray-700 text-sm font-bold mb-2" %>
-                    <%= f.text_field :first_name, class: "shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" %>
-                </div>
-
-                <div class="mb-4">
-                    <%= f.label :last_name, class: "block text-gray-700 text-sm font-bold mb-2" %>
-                    <%= f.text_field :last_name, class: "shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" %>
-                </div>
 
                 <div class="mb-4">
                     <%= f.label :email, class: "block text-gray-700 text-sm font-bold mb-2" %>
@@ -32,3 +22,4 @@
         </div>
     </div>
 </div>
+<%= javascript_include_tag 'signupStep2' %>

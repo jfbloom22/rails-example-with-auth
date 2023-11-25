@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
-  get 'signup', to: 'users#new'
+  get 'signup/step1', to: 'users#step1'
+  get 'signup/step2', to: 'users#step2'
   resources :users, except: [:new] do
     collection do
       post :preview
