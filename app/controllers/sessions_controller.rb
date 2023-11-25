@@ -5,7 +5,7 @@ class SessionsController < ApplicationController
         @user = User.find_by_email(params[:session][:email].downcase.strip)
         if @user && @user.authenticate(params[:session][:password])
             session[:user_id] = @user.id 
-            redirect_to '/dashboard'
+            redirect_to '/dogs'
         else
             redirect_to '/login'
         end

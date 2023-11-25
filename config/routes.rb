@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'dogs/index'
   get 'signup', to: 'users#new'
   resources :users, except: [:new] do
     collection do
@@ -8,7 +9,7 @@ Rails.application.routes.draw do
   get 'login', to: 'sessions#new'
   post 'login', to: 'sessions#create'
   delete 'logout',  to: 'sessions#destroy'
-  get 'dashboard', to: 'dashboard#index', as: 'dashboard'
+  get 'dogs', to: 'dogs#index', as: 'dogs'
   root 'sessions#new'
 
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html

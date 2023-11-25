@@ -1,0 +1,9 @@
+<h1 class="text-4xl font-bold text-center py-5 px-5">Random Picture of a Dog</h1>
+
+<div class="dog-images">
+  <% @dog_images.each do |dog| %>
+    <div class="dog-image rounded overflow-hidden shadow-lg">
+      <img class="mx-auto" src="<%= dog['url'] %>" alt="Barking Dog">
+    </div>
+  <% end %>
+</div>

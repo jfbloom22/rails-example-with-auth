@@ -21,7 +21,7 @@
           <ul class="flex space-x-4">
             <li class="text-blue-500 inline-block py-2"><%= current_user.email %></li>
             <li ><%= button_to "Log out", logout_path, method: "delete", class: 'px-3 py-2 rounded bg-blue-500 text-white' %></li>
-            <li ><%= link_to "Dashboard", dashboard_path, class: 'px-3 py-2 rounded bg-blue-500 text-white inline-block' %></li>
+            <li ><%= link_to "Dogs", dogs_path, class: 'px-3 py-2 rounded bg-blue-500 text-white inline-block' %></li>
           </ul>
           <% else %>
           <ul class="flex space-x-4">  
